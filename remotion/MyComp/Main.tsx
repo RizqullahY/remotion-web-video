@@ -7,11 +7,13 @@ import {
   useVideoConfig,
 } from "remotion";
 import { CompositionProps } from "../../types/constants";
-import { NextLogo } from "./NextLogo";
+// import { NextLogo } from "./NextLogo";
 import { loadFont, fontFamily } from "@remotion/google-fonts/Inter";
 import React from "react";
 import { Rings } from "./Rings";
 import { TextFade } from "./TextFade";
+import { RMDLogo } from "./RemandoLogo";
+
 
 loadFont();
 
@@ -37,7 +39,8 @@ export const Main = ({ title }: z.infer<typeof CompositionProps>) => {
       <Sequence durationInFrames={transitionStart + transitionDuration}>
         <Rings outProgress={logoOut}></Rings>
         <AbsoluteFill className="justify-center items-center">
-          <NextLogo outProgress={logoOut}></NextLogo>
+          {/* <NextLogo outProgress={logoOut}></NextLogo> */}
+          <RMDLogo outProgress={logoOut}></RMDLogo>
         </AbsoluteFill>
       </Sequence>
       <Sequence from={transitionStart + transitionDuration / 2}>
